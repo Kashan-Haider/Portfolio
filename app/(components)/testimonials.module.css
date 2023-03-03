@@ -1,0 +1,94 @@
+.main{
+    padding: 30px;
+    overflow-x: hidden;
+    position: relative;
+}
+.design{
+    position: absolute;
+    top: 80px;
+    left: -400px;
+    height: 60vh;
+    width: 600px;
+    background: rgb(0,115,255);
+  background: linear-gradient(220deg, rgb(205, 164, 243) 0%, rgb(34, 72, 241) 100%);
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: .2;
+  }
+  .design2{
+    position: absolute;
+    top: 20px;
+    right: -300px;
+    height: 90%;
+    width: 40%;
+    background: rgb(0,115,255);
+  background: linear-gradient(76deg, rgb(217, 255, 0) 0%, rgb(230, 226, 5) 100%);
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: .3;
+  }
+  .design3{
+    position: absolute;
+    top: 400px;
+    left: 450px;
+    height: 20%;
+    width: 10%;
+    background: rgb(0,115,255);
+  background: linear-gradient(76deg, rgb(42, 195, 233) 0%, rgb(6, 241, 65) 100%);
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: .4;
+  }
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.heading h1{
+    font-size: 60px;
+    color: #3b3b3b;
+}
+.body{
+    display: flex;
+    overflow-x: auto;
+    padding: 30px 0;
+}
+.body::-webkit-scrollbar{
+    display: none;
+}
+.userInput{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    margin-top: 30px;
+    max-width: fit-content;
+}
+.userInput input{
+    padding: 5px;
+    margin: 10px 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #3c3c3c;
+    width: 350px;
+}
+.userInput button{
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width:425px){
+    .heading h1{
+        font-size: 50px;
+    }
+    .heading h2{
+        font-size: 20px;
+    }
+    .body{
+        padding: 10px 0;
+    }
+    .userInput input{
+        width: 300px;
+    }
+}

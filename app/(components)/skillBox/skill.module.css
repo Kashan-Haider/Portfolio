@@ -1,0 +1,96 @@
+.boxMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(133, 131, 131) 100%);
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.41);
+-webkit-box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.41);
+-moz-box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.41);
+transition:  0.5s ease-in-out;
+}
+.head{
+    color: white;
+    background: rgb(0,115,255);
+    background: linear-gradient(40deg, rgba(0,115,255,1) 0%, rgba(251,138,255,1) 100%);
+    border-radius: 100% 0% 100% 0% / 0% 37% 63% 100% ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: all .5s ease-in-out;
+    padding: 20px;
+}
+.head i{
+    height: 80px;
+    margin: 0 20px 0 10px;
+    font-size: 80px;
+}
+.boxMain h1{
+font-size: 40px;
+color: white;
+margin-top: 10px;
+}
+.head:hover{ 
+    border-radius: 0;
+}
+.bottom{
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.skills{
+    position: relative;
+    width: 60%;
+}
+.boxMain .line{
+    background-color: #686666;
+    height: 10px;
+    width: 100%;
+    border-radius: 100px;
+}
+.skills .filled{
+    background: rgb(0,115,255);
+    background: linear-gradient(40deg, rgba(0,115,255,1) 0%, rgba(251,138,255,1) 100%);
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bottom p{
+    color: #cecdcd;
+    margin-left: 10px;
+}
+
+
+
+@media screen and (max-width:768px){
+    .boxMain{
+        width: 70%;
+        margin: auto;
+    }
+}
+@media screen and (max-width:425px){
+    .boxMain{
+        width: 90vw;
+    }
+    .boxMain h1{
+        font-size: 30px;
+    }
+    .head i{
+        margin:  0 10px 0 10px;
+        font-size: 60px;
+        height: 60px;
+    }
+    .head{
+        padding: 10px 0;
+    }
+}

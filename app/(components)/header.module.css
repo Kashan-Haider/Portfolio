@@ -1,0 +1,106 @@
+.main {
+  background:#fff;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 110vh;
+}
+.design{
+  position: absolute;
+  top: 80px;
+  left: -400px;
+  height: 90vh;
+  width: 600px;
+  background: rgb(0,115,255);
+background: linear-gradient(220deg, rgb(205, 164, 243) 0%, rgb(34, 72, 241) 100%);
+border-radius: 50%;
+filter: blur(30px);
+opacity: .2;
+}
+.design2{
+  position: absolute;
+  top: -180px;
+  right: -170px;
+  height: 100%;
+  width: 50%;
+  background: rgb(0,115,255);
+background: linear-gradient(76deg, rgba(0,115,255,1) 0%, rgba(251,138,255,1) 100%);
+border-radius: 50%;
+filter: blur(30px);
+opacity: .2;
+}
+.nav{
+  padding: 10px 40px;
+}
+.logo img{
+  height: 40px;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .header .text{
+  flex-basis: 50%;
+  color: #3b3b3b;
+  padding: 40px;
+}
+.header .text h1{
+  font-size: 80px;
+}
+.header .text h2{
+  margin-bottom: 10px;
+}
+.image{
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+padding: 40px;
+}
+.image img{
+  height: 500px;
+}
+.temp{
+  display: block;
+}
+
+
+@media screen and (max-width:1024px){
+  .header .text h1{
+    font-size: 70px;
+  }
+  .image img{
+    height: 400px;
+  }
+}
+@media screen and (max-width:768px){
+  .header{
+    margin-top: 50px;
+  }
+  .header .text h1{
+    font-size: 90px;
+  }
+ .header{
+  flex-direction: column;
+ }
+ .temp{
+  display: none;
+ }
+}
+@media screen and (max-width:425px){
+.header {
+  margin-top: 20px;
+}
+.header .text h1{
+  font-size: 60px;
+}
+.header .text h2{
+  font-size: 18px;
+}
+.image img{
+  height: 310px;
+}
+.nav , .header .text  , .header .image {
+  padding: 15px;
+}
+}

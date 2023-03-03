@@ -1,0 +1,113 @@
+.main{
+margin-top: 50px;
+position: relative;
+overflow-x: hidden;
+}
+.design{
+    position: absolute;
+    top: 80px;
+    left: -150px;
+    height: 20vh;
+    width: 20%;
+    background: rgb(0,115,255);
+  background: linear-gradient(176deg, rgba(0,115,255,1) 0%, rgba(251,138,255,1) 100%);
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: .2;
+  }
+  .design2{
+    position: absolute;
+    top: 100px;
+    right: -100px;
+    height: 40vh;
+    width: 30%;
+    background: rgb(0,115,255);
+  background: linear-gradient(76deg, rgba(0,115,255,1) 0%, rgba(251,138,255,1) 100%);
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: .4;
+  }
+  .design3{
+    position: absolute;
+    background-color: orange;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    left: 150px;
+  opacity: .5;
+  bottom: 80px;
+  filter: blur(10px);
+
+  }
+  .design4{
+    position: absolute;
+    background-color: rgb(62, 62, 218);
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    right: 100%;
+  opacity: .5;
+  bottom: 100px;
+  filter: blur(10px);
+  }
+  .design5{
+    position: absolute;
+    background-color: rgb(44, 141, 252);
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    right: 40%;
+  opacity: .5;
+  bottom: 250px;
+  filter: blur(10px);
+  }
+  .design6{
+    position: absolute;
+    background-color: rgb(220, 247, 72);
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    right: 30%;
+  opacity: .8;
+  bottom: 60px;
+  filter: blur(10px);
+  }
+.heading h1{
+    font-size: 70px;
+    text-align: center;
+    color: #3b3b3b;
+}
+.scrollHeading span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+.scrollHeading .icon{
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  background: rgb(0,115,255);
+  background: linear-gradient(76deg, rgba(0,115,255,1) 0%, rgba(251,138,255,1) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.body{
+    display: flex;
+    overflow: auto;
+    padding: 20px 0;
+}
+.body::-webkit-scrollbar{
+    display: none;
+}
+
+@media screen and (max-width:425px){
+  .main{
+    padding: 0px;
+  }
+  .heading h1{
+      font-size: 50px;
+  }
+}
