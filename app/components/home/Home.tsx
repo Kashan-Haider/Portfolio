@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center h-screen w-screen overflow-hidden p-5">
+    <div id="home" className="relative flex flex-col items-center justify-center h-screen w-screen overflow-hidden p-5">
       <div className="relative z-10 flex flex-col items-center justify-center">
         <FadeInAnimated delay={0.7}>
           <Image
@@ -21,34 +21,34 @@ const Home = () => {
             alt="profile picture"
           />
         </FadeInAnimated>
-        <div className="h-fit overflow-hidden">
+        
           <SlideUpAnimated delay={0.3}>
             <h1 className="text-3xl md:text-4xl lg:text-7xl text-center font-bold text-primaryText">
               Hello! I&apos;m Kashan
             </h1>
           </SlideUpAnimated>
-        </div>
-        <div className="h-fit overflow-hidden">
+        
+        
           <SlideUpAnimated delay={0.3}>
             <h1 className="text-primaryText text-2xl md:text-3xl lg:text-7xl text-center pb-2">
               Software Engineer
             </h1>
           </SlideUpAnimated>
-        </div>
-        <div className="h-fit overflow-hidden">
+       
+        
           <SlideUpAnimated delay={0.3}>
             <p className="text-primaryText text-xl mt-5 text-center">
               With a keen eye and a masterful touch, I craft websites into
               digital masterpieces
             </p>
           </SlideUpAnimated>
-        </div>
+      
       </div>
-      <div className="h-fit overflow-hidden">
+      
         <SlideUpAnimated delay={0.3}>
           <Button title="Let's Talk" element="footer" />
         </SlideUpAnimated>
-      </div>
+      
       <FadeInAnimated delay={0.3}>
         <div className="absolute -z-10 opacity-50 top-0 left-0  rounded-xl blur-[200px] w-[200px] h-[300px] md:w-[700px] md:h-[500px] bg-gradient-to-tl from-[#f50c0cf1] via-[#f5690cda] to-[#ffcea09f]"></div>
       </FadeInAnimated>

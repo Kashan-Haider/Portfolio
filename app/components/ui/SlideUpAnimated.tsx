@@ -13,8 +13,8 @@ type SlideUpAnimatedProps = {
 
 const SlideUpAnimated: React.FC<SlideUpAnimatedProps> = ({ 
   children, 
-  delay = 0.2, 
-  duration = 2 
+  delay = 0, 
+  duration = 1 
 }) => {
   const textRef = useRef<HTMLDivElement>(null);
   
@@ -53,7 +53,9 @@ const SlideUpAnimated: React.FC<SlideUpAnimatedProps> = ({
     };
   }, [delay, duration]);
   
-  return <div ref={textRef}>{children}</div>;
+  return <div className="h-fit overflow-hidden">
+    <div ref={textRef}>{children}</div>
+  </div>;
 };
 
 export default SlideUpAnimated;

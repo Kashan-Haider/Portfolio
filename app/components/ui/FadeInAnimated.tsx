@@ -11,17 +11,17 @@ type FadeInAnimatedProps = {
   duration?: number;
 };
 
-const FadeInAnimated: React.FC<FadeInAnimatedProps> = ({ 
-  children, 
-  delay = 0.2, 
-  duration = 2 
+const FadeInAnimated: React.FC<FadeInAnimatedProps> = ({
+  children,
+  delay = 0,
+  duration = 5,
 }) => {
   const textRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const element = textRef.current;
     if (!element) return;
-    
+
     // Create the animation
     const animation = gsap.fromTo(
       element,
@@ -34,7 +34,7 @@ const FadeInAnimated: React.FC<FadeInAnimatedProps> = ({
         paused: true, // Start paused so ScrollTrigger controls it
       }
     );
-    
+
     // Create ScrollTrigger
     const trigger = ScrollTrigger.create({
       trigger: element,
@@ -43,16 +43,16 @@ const FadeInAnimated: React.FC<FadeInAnimatedProps> = ({
       onEnter: () => animation.play(),
       onLeave: () => animation.reverse(),
       onEnterBack: () => animation.play(),
-      onLeaveBack: () => animation.reverse()
+      onLeaveBack: () => animation.reverse(),
     });
-    
+
     // Cleanup function
     return () => {
       animation.kill();
       trigger.kill();
     };
   }, [delay, duration]);
-  
+
   return <div ref={textRef}>{children}</div>;
 };
 
