@@ -24,7 +24,7 @@ const Menu = () => {
       mm.add("(max-width: 768px)", () => {
         gsap.to(boxRef.current, {
           width: "90vw",
-          height: "90vh",
+          height: "60vh",
           top: "-4px",
           right: "-4px",
           duration: 0.5,
@@ -91,7 +91,7 @@ const Menu = () => {
     <div className="relative w-fit z-50">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`relative z-10 h-fit overflow-hidden px-6 md:px-8 py-2 md:py-3 rounded-full ${
+        className={`relative z-10 h-fit overflow-hidden px-6 md:px-8 py-2 md:py-3 rounded-full text-xs md:text-base${
           isOpen ? " text-primary" : " text-dark bg-primary"
         } transition-all duration-3000`}
       >

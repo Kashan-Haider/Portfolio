@@ -1,5 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 const Experience = (props: {
@@ -11,31 +11,43 @@ const Experience = (props: {
   isOpen: boolean;
 }) => {
   return (
-    <div className="text-primaryText flex flex-col gap-5 hover:bg-[#ffffff0e] p-5 md:p-10 rounded-3xl transition-all duration-500">
+    <div
+      className={`text-primaryText flex flex-col gap-5 hover:bg-[#ffffff0e] p-5 md:py-8 transition-all duration-500 ${
+        props.isOpen ? "bg-[#ffffff0e]" : ""
+      } rounded-3xl `}
+    >
       <div className="flex justify-between items-center">
-      <h1 className="text-xs md:text-3xl font-bold">{props.title}</h1>
-      <FontAwesomeIcon icon={props.isOpen? faAngleDown : faAngleUp} />
+        <h1 className="text-xl md:text-3xl font-bold">{props.title}</h1>
+        <FontAwesomeIcon icon={props.isOpen ? faAngleDown : faAngleUp} />
       </div>
-      <div 
-        className={`flex flex-col gap-3 transition-all duration-500 ${
-          props.isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+      <div
+        className={`ftransition-all duration-500 text-xl ${
+          props.isOpen
+            ? "max-h-[1200px] "
+            : "overflow-hidden max-h-0 "
         }`}
       >
-        <div className="font-semibold flex items-center justify-between">
+        <div className={`flex flex-col gap-3 transition-all duration-1000 text-xl ${
+          props.isOpen
+            ? "opacity-100"
+            : "opacity-0"
+        }`}>
+        <div className="font-semibold flex flex-col md:flex-row gap-2 md:items-center justify-between text-base md:text-xl">
           <p className="font-semibold">{props.company}</p>
           <p>{props.date}</p>
         </div>
-        <p>{props.description}</p>
-        <ul>
+        <p className="text-base md:text-xl ">{props.description}</p>
+        <ul className="text-base md:text-xl">
           {props.details.map((item: string, index: number) => {
             return (
-              <div className="flex items-center gap-3" key={index}>
-                <div className="w-[4px] h-[4px] rounded-full bg-white"></div>
+              <div className="flex gap-3" key={index}>
+                <div className="min-w-[6px] min-h-[4px] max-w-[6px] max-h-[4px] mt-3 rounded-full bg-white"></div>
                 <li>{item}</li>
               </div>
             );
           })}
         </ul>
+        </div>
       </div>
     </div>
   );

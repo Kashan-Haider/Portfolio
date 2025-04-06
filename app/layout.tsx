@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode, useState, useEffect } from "react";
-// import LoadingScreen from "@/app/components/ui/LoadingScreen";
+import LoadingScreen from "@/app/components/ui/LoadingScreen";
 import { Poppins } from "next/font/google"; // Changed from @next/font/google
 import "./globals.css";
 import LenisProvider from "./components/ui/LenisProvider";
@@ -29,13 +29,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       }`}
     >
       <body>
-        {/* {loading ? (
+        {loading ? (
           <LoadingScreen setLoading={setLoading} />
         ) : (
           <LenisProvider>{children}</LenisProvider>
-        )} */}
+        )}
 
-        <LenisProvider>{children}</LenisProvider>
+        {/* <LenisProvider>{children}</LenisProvider> */}
       </body>
     </html>
   );

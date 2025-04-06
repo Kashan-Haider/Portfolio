@@ -39,7 +39,8 @@ const SlideUpAnimated: React.FC<SlideUpAnimatedProps> = ({
     // Create ScrollTrigger
     const trigger = ScrollTrigger.create({
       trigger: element,
-      start: "top 90%",
+      start: "top 100%",
+      end: "bottom 10%",
       onEnter: () => animation.play(),
       onLeave: () => animation.reverse(),
       onEnterBack: () => animation.play(),

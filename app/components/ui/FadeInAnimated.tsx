@@ -13,8 +13,8 @@ type FadeInAnimatedProps = {
 
 const FadeInAnimated: React.FC<FadeInAnimatedProps> = ({
   children,
-  delay = 0,
-  duration = 5,
+  delay = 0, 
+  duration = 2 
 }) => {
   const textRef = useRef<HTMLDivElement>(null);
 
@@ -39,7 +39,7 @@ const FadeInAnimated: React.FC<FadeInAnimatedProps> = ({
     const trigger = ScrollTrigger.create({
       trigger: element,
       start: "top 80%",
-      end: "bottom 20%",
+      end: "bottom 0%",
       onEnter: () => animation.play(),
       onLeave: () => animation.reverse(),
       onEnterBack: () => animation.play(),
