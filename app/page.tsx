@@ -7,12 +7,12 @@ import HorizontalTextAnimation from "./components/horizontal-text-animation/Hori
 
 const page = () => {
   return (
-    <div className="text-white w-screen overflow-hidden">
-      <Navbar/>
+    <div className="text-white w-screen">
+      <Navbar />
       <Home />
       <About />
-      <HorizontalTextAnimation/>
-      <Work/>
+      <HorizontalTextAnimation />
+      <Work />
     </div>
   );
 };

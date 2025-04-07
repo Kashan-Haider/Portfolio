@@ -69,7 +69,7 @@ const Home = () => {
         <div className="absolute -z-10 opacity-50 top-0 left-0  rounded-xl blur-[200px] w-[200px] h-[300px] md:w-[700px] md:h-[500px] bg-gradient-to-tl from-[#f50c0cf1] via-[#f5690cda] to-[#ffcea09f]"></div>
       </FadeInAnimated>
       <FadeInAnimated delay={1} duration={2}>
-        <div className="absolute -z-10 opacity-50 top-0 md:left-[20%] rounded-3xl blur-[100px] w-[300px] h-[300px] md:w-[800px] md:h-[600px] bg-gradient-to-br from-[#07277ed2] via-[#7b15a3c7] to-[#07277e7e]"></div>
+        <div className="absolute -z-10 opacity-50 top-0 md:left-[20%] rounded-3xl blur-[100px] w-[300px] h-[300px] md:w-[800px] md:h-[600px] bg-gradient-to-br from-[#9A3639] via-[#7b15a3c7] to-[#d35a60]"></div>
       </FadeInAnimated>
       <FadeInAnimated delay={2.5}>
         <div className="absolute -z-10 top-0 -right-[10%] rotate-12 rounded-full blur-[100px] w-[100px] h-[100px] md:w-[600px] md:h-[600px] bg-primary opacity-10"></div>

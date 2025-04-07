@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       lang="en"
       className={`${
         poppins.className
-      } bg-dark text-white w-screen overflow-x-hidden ${
+      } bg-dark text-white ${
         loading ? "h-screen w-screen overflow-hidden" : "h-full hide-scrollbar"
       }`}
     >

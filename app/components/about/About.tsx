@@ -14,26 +14,21 @@ const About = () => {
     date: string;
     details: string[];
   };
+
   const aboutRef = useRef(null);
   const [isOpen, setIsOpen] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   const handleMouseMove = (event: MouseEvent) => {
-    // Don't process mouse movements on mobile
     if (isMobile) return;
-
     if (!aboutRef.current) return;
 
-    // Get the bounding rectangle of the about section
     const ref = aboutRef.current as HTMLDivElement;
     const rect = ref.getBoundingClientRect();
-
-    // Calculate cursor position relative to the about section
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
-
-    // Only update cursor if mouse is within the about section
     const cursor = document.getElementById("about-cursor");
+
     if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
       gsap.to("#about-cursor", {
         x: x - 10,
@@ -45,14 +40,12 @@ const About = () => {
 
       if (cursor) cursor.style.display = "block";
     } else {
-      // Hide cursor when outside the about section
       if (cursor) cursor.style.display = "none";
     }
   };
 
-  // Check if we're on mobile
   const checkMobile = () => {
-    setIsMobile(window.innerWidth < 1024); // 1024px is the lg breakpoint in Tailwind
+    setIsMobile(window.innerWidth < 1024);
   };
 
   const experiences: ExperienceType[] = [
@@ -108,21 +101,17 @@ const About = () => {
         "Developed adaptive chatbots and autonomous agents for real-time interaction and task automation.",
         "Optimized AI pipelines for performance and cost-efficiency in production environments.",
       ],
-    }
-    
+    },
   ];
 
   useEffect(() => {
-    // Check if mobile on mount and window resize
     checkMobile();
     window.addEventListener("resize", checkMobile);
 
-    // Only add mousemove listener if not mobile
     if (!isMobile) {
       window.addEventListener("mousemove", handleMouseMove);
     }
 
-    // Cleanup
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("resize", checkMobile);
@@ -138,9 +127,7 @@ const About = () => {
         ></div>
       )}
 
-      {/* Main container - using flex instead of grid for better control */}
       <div className="flex flex-col lg:flex-row gap-5 md:gap-10 text-white">
-        {/* Content column - need to make sure this has enough content */}
         <div className="lg:w-3/5 flex flex-col gap-5 md:gap-10 cursor-default">
           <div
             className="flex flex-col md:gap-10"
@@ -182,8 +169,7 @@ const About = () => {
             </FadeInAnimated>
           </div>
 
-          {/* Experience items */}
-          <div className="flex flex-col gap-5 pb-20">
+          <div className="flex flex-col gap-5">
             {experiences.map((experience: ExperienceType, index: number) => {
               return (
                 <div
@@ -206,7 +192,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Image column with CSS-based position:sticky */}
         <div className="hidden lg:block lg:w-2/5">
           <div className="sticky top-32 rounded-3xl overflow-hidden h-fit">
             <FadeInAnimated duration={2} delay={1}>

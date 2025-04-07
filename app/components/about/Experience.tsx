@@ -12,7 +12,7 @@ const Experience = (props: {
 }) => {
   return (
     <div
-      className={`text-primaryText flex flex-col gap-5 hover:bg-[#ffffff0e] p-5 md:py-8 transition-all duration-500 ${
+      className={`text-primaryText flex flex-col gap-5 md:hover:bg-[#ffffff0e] p-5 md:py-8 transition-all duration-500 ${
         props.isOpen ? "bg-[#ffffff0e]" : ""
       } rounded-3xl `}
     >
