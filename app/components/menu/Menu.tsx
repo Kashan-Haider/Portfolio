@@ -68,19 +68,19 @@ const Menu = () => {
   const SocialItems = [
     {
       title: "Instagram",
-      path: "https://instagram.com",
+      path: "https://www.instagram.com/ka_sha_n/",
     },
     {
       title: "Facebook",
-      path: "https://instagram.com",
+      path: "https://www.facebook.com/kashi.awan.52687506/",
     },
     {
       title: "LinkedIn",
-      path: "https://instagram.com",
+      path: "https://www.linkedin.com/in/ka-sha-n/",
     },
     {
-      title: "X(Twitter)",
-      path: "https://instagram.com",
+      title: "Github",
+      path: "https://github.com/Kashan-Haider",
     },
   ];
 
@@ -120,7 +120,7 @@ const Menu = () => {
           </div>
         )}
         {isOpen && (
-          <div className="relative z-50 grid grid-cols-2">
+          <div className="relative z-50 grid grid-cols-2 text-dark">
             {SocialItems.map((item, index) => {
               return (
                 <SocialLink key={index} title={item.title} path={item.path} />

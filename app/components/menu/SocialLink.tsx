@@ -24,7 +24,7 @@ const SocialLink = ({ title, path }: { title: string; path: string }) => {
       <div ref={linkRef}>
         <Link
           href={path}
-          className="text-dark cursor-pointer hover:scale-105 transition-all duration-300 ease-linear text-xl"
+          className="cursor-pointer hover:scale-105 transition-all duration-300 ease-linear text-base md:text-xl"
         >
           {title}
         </Link>

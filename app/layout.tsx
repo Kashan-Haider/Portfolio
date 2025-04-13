@@ -21,6 +21,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   return (
     <html
+    title="Kashan Haider"
       lang="en"
       className={`${
         poppins.className

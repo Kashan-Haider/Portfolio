@@ -157,7 +157,7 @@ const About = () => {
             <FadeInAnimated>
               <p className="text-xl md:text-2xl lg:text-4xl ">
                 Whether it&apos;s a web app, mobile solution, blockchain innovation,
-                or a generative AI project — <span className="text-primary">I&apos;m all in</span>. As a versatile web
+                or a generative AI project — <span className="text-primary">I&apos;m all in</span>. As a versatile software
                 developer proficient in JavaScript, TypeScript, React, Next.js,
                 Express js, Generative AI, and Blockchain, I engineer
                 sophisticated, high-performance solutions with a sharp focus on
@@ -194,7 +194,7 @@ const About = () => {
 
         <div className="hidden lg:block lg:w-2/5">
           <div className="sticky top-32 rounded-3xl overflow-hidden h-fit">
-            <FadeInAnimated duration={2} delay={1}>
+            <FadeInAnimated duration={2} delay={0}>
               <Image
                 className="w-full rounded-3xl overflow-hidden object-cover"
                 src={"/about-section.jpg"}

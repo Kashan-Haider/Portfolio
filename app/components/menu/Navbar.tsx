@@ -5,7 +5,7 @@ import Menu from './Menu'
 
 const Navbar = () => {
   return (
-    <div className="absolute w-full">
+    <div className="absolute w-screen overflow-hidden">
         <div className="fixed w-full z-50 flex items-center justify-between p-5 md:p-10">
           <Link
             to={"home"}
